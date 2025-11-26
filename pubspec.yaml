@@ -1,0 +1,64 @@
+name: stress_detection_app
+description: "Real-time Stress Detection System with Face, Text & Psychological Support."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # --- Core UI Assets ---
+  cupertino_icons: ^1.0.6
+  google_fonts: ^6.2.1
+
+  # --- Hardware & Sensors ---
+  camera: ^0.11.0
+  permission_handler: ^11.3.1
+
+  # --- Visualization ---
+  fl_chart: ^0.69.0
+  flutter_spinkit: ^5.2.1
+
+  # --- Utilities ---
+  intl: ^0.19.0
+  image_picker: ^1.0.7
+  google_mlkit_face_detection: ^0.10.0
+  google_generative_ai: ^0.4.6
+  flutter_dotenv: ^5.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  # Tooling packages belong here
+  flutter_launcher_icons: ^0.14.1
+  flutter_native_splash: ^2.4.1
+
+  flutter_dotenv: ^5.1.0
+
+# --- CONFIGURATION BLOCKS (ROOT LEVEL) ---
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/logo/logo.png"
+  min_sdk_android: 21
+
+flutter_native_splash:
+  color: "#FFFFFF"
+  image: "assets/logo/logo.png"
+  android_12:
+    image: "assets/logo/logo.png"
+    color: "#FFFFFF"
+
+# --- FLUTTER CONFIGURATION ---
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/logo/logo.png
+    - secret_key.env
