@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "603888246678",
+    "project_id": "entrykit-34ebd",
+    "storage_bucket": "entrykit-34ebd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603888246678:android:f742424d6372e7bf1947b7",
+        "android_client_info": {
+          "package_name": "com.example.stress_detection_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "603888246678-o88q5mbo44sqha9fpq4t87qnrt25qtsv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.stress_detection_app",
+            "certificate_hash": "f76ebaa51b040a045e763f7bef47b27f94523ada"
+          }
+        },
+        {
+          "client_id": "603888246678-2rkksias2g90srkt25jopphk51ch2enp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmV_aQvrytQuzPkVl-9JgGr8cm2LOR-po"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "603888246678-2rkksias2g90srkt25jopphk51ch2enp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -59,12 +59,15 @@ class _SupportChatScreenState extends State<SupportChatScreen> {
 
   void _addInitialGreeting() {
     final stressLabel = StressData().currentLabel;
-    String greeting = "I'm here. I'm listening.";
+    // NEW: Get User Name
+    final userName = StressData().userNameNotifier.value;
+
+    String greeting = "Hello $userName. I'm here. I'm listening.";
 
     if (stressLabel == "High Stress") {
-      greeting = "I can sense things are heavy right now. I'm here to listen. What's happening?";
+      greeting = "Hello $userName. I can sense things are heavy right now. I'm here to listen. What's happening?";
     } else if (stressLabel == "Relaxed") {
-      greeting = "You seem balanced. How is your day going?";
+      greeting = "Hi $userName. You seem balanced. How is your day going?";
     }
 
     Future.delayed(const Duration(milliseconds: 500), () {
@@ -136,6 +139,7 @@ class _SupportChatScreenState extends State<SupportChatScreen> {
     try {
       final data = StressData();
       final int userTurnCount = _messages.where((m) => m.isUser).length;
+      final userName = data.userNameNotifier.value; // Get name for prompt context
 
       bool userIsClosing = text.toLowerCase().contains("thanks") ||
           text.toLowerCase().contains("bye") ||
@@ -161,7 +165,7 @@ class _SupportChatScreenState extends State<SupportChatScreen> {
         PHASE: ACTION & EMPOWERMENT.
         GOAL: Give confidence and specific tools.
         CRITICAL:
-        - If they say "I can't", say: "You are capable. Pull yourself together, we can fix this."
+        - If they say "I can't", say: "You are capable, $userName. Pull yourself together, we can fix this."
         - Offer ONE specific solution (CBT/Action).
         - Be a strong mentor.
         """;
@@ -182,6 +186,7 @@ class _SupportChatScreenState extends State<SupportChatScreen> {
       You are a world-class Psychotherapist (compassionate, human, expert).
       
       LIVE CONTEXT:
+      - User Name: $userName
       - Stress: ${data.currentStressValue.toInt()}/100 (${data.currentLabel})
       - Turn: $userTurnCount
 
@@ -191,6 +196,7 @@ class _SupportChatScreenState extends State<SupportChatScreen> {
       - Max 3 sentences.
       - Sound human.
       - Never be generic.
+      - Use the user's name ($userName) sparingly but effectively to build rapport.
 
       USER SAYS:
       "$text"

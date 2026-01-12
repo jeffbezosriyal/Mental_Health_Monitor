@@ -1,3 +1,15 @@
+// 1. ADD THIS BUILDSCRIPT BLOCK AT THE VERY TOP
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // This dependency is required for the App-level plugin to work
+        classpath("com.google.gms:google-services:4.4.0")
+    }
+}
+
 allprojects {
     repositories {
         google()

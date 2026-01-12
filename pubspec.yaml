@@ -11,6 +11,14 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # --- AUTHENTICATION DEPENDENCIES ---
+  entry_kit: ^0.0.3
+
+  firebase_core: ^2.24.2
+  firebase_auth: ^4.16.0
+  google_sign_in: ^6.1.6
+  sign_in_with_apple: ^6.1.0
+
   # --- Core UI Assets ---
   cupertino_icons: ^1.0.6
   google_fonts: ^6.2.1
@@ -29,18 +37,18 @@ dependencies:
   google_mlkit_face_detection: ^0.10.0
   google_generative_ai: ^0.4.6
   flutter_dotenv: ^5.1.0
+  shared_preferences: ^2.5.4
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^4.0.0
-  # Tooling packages belong here
-  flutter_launcher_icons: ^0.14.1
+  flutter_lints: ^3.0.0
+
+  # Tooling packages
+  flutter_launcher_icons: ^0.14.4
   flutter_native_splash: ^2.4.1
 
-  flutter_dotenv: ^5.1.0
-
-# --- CONFIGURATION BLOCKS (ROOT LEVEL) ---
+# --- CONFIGURATION BLOCKS ---
 
 flutter_launcher_icons:
   android: "launcher_icon"
@@ -49,11 +57,12 @@ flutter_launcher_icons:
   min_sdk_android: 21
 
 flutter_native_splash:
-  color: "#FFFFFF"
+  color: "#F5F7F8"
   image: "assets/logo/logo.png"
   android_12:
     image: "assets/logo/logo.png"
-    color: "#FFFFFF"
+    color: "#F5F7F8"
+    icon_background_color: "#F5F7F8"
 
 # --- FLUTTER CONFIGURATION ---
 flutter:

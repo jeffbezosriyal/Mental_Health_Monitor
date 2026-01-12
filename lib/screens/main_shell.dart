@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:stress_detection_app/screens/home_monitor.dart';
 import 'package:stress_detection_app/screens/support_chat.dart';
+import 'package:stress_detection_app/screens/profile_page.dart'; // Import New Screen
 
 class MainShell extends StatefulWidget {
   const MainShell({super.key});
@@ -15,7 +16,7 @@ class _MainShellState extends State<MainShell> {
   final List<Widget> _pages = [
     const HomeMonitorScreen(),
     const SupportChatScreen(),
-    const Center(child: Text("Profile")),
+    const ProfileScreen(), // Replaced placeholder
   ];
 
   @override
